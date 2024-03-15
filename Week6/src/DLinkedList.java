@@ -48,6 +48,7 @@ public class DLinkedList {
         if(head == null) {
             head = tmp;
         }
+        size++;
     }
 
     public boolean removeAtIndex(int index) {
