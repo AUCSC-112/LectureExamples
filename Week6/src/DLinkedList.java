@@ -55,16 +55,18 @@ public class DLinkedList {
         if(index >= size || index < 0){
             return false;
         }
-        size--;
+        
         if(index == size - 1){ //if it's the last element,
             tail.prev.next = null;
             tail = tail.prev;
+            size--;
             return true;
 
         }
         if(index == 0){
             head.next.prev = null;
             head = head.next;
+            size--;
             return true;
         }
 
@@ -77,6 +79,7 @@ public class DLinkedList {
         }
         node2Remove.prev.next = node2Remove.next;
         node2Remove.next.prev = node2Remove.prev;
+        size--;
         return true;
 
 
